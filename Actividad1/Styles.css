@@ -1,0 +1,171 @@
+/* Estilo general para el cuerpo */
+body
+{
+    background-color: #6f40fc;/*Color de fondo*/
+    font-family: Arial, sans-serif; /*Aplica un estilo de fuente al cuerpo*/
+    margin: 0;/* Aplica un margen en todos los lados */
+    padding: 0; /* Aplica un espacio intewrior  en todos los lados */
+}
+
+/* Estilos del menú de navegación */
+nav 
+{
+    background-color: #6e4d4d; /* Color de fondo */
+    padding: 10pxs;/*Ancho de espacio interiro*/
+    border-radius: 0px;/*Grados del borde*/
+    
+}
+
+nav ul 
+{
+    display: flex;
+    list-style-type: none; /* Elimina los puntos de lista */
+    margin: 10px;/* Aplica un margen en todos los lados */
+    padding: 10px;/* Aplica un espacio intewrior  en todos los lados */
+    text-align: center; /* Centra los enlaces */
+}
+
+nav ul li 
+{
+    display: inline; /* Los elementos de lista se alinean horizontalmente */
+    position: relative; /* Necesario para posicionar el submenú */
+    margin-right: 250px; /* Espacio entre los enlaces */
+}
+
+nav ul li a 
+{
+    
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.3s;
+    font-size: 18px;/* Establece un tamaño de fuente de 18 píxeles */
+    padding: 10px;/* Aplica un espacio intewrior  en todos los lados */
+}
+
+nav ul li a:hover
+ {
+    color: #f1bfded2; /* Color al pasar el cursor */
+    background-color: #e645fc; /* Fondo cuando el cursor está sobre el enlace */
+    border-radius: 0px; /* Bordes redondeados */
+}
+/* Estilos para el submenú */
+nav ul li .submenu 
+{
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute;/* Posiciona el submenú */
+    top: 100%; /* Aparece justo debajo del elemento principal */
+    left: 5px;
+    background-color: #c25fcf; /* Fondo oscuro para el submenú */
+    min-width: 10px;/*Largo del recuadro*/
+    border-radius: 0px;/*Para los grados del borde del recuadro*/
+    list-style: none;
+    padding: 10px 0; /* Añade espaciado interior al submenú (10px en la parte superior e inferior) */
+    text-align: center; /* Centra el texto dentro del submenú */
+    
+    
+}
+nav ul li:hover .submenu 
+{
+    
+    display: block; /* El submenú se muestra cuando el usuario pasa el ratón sobre el elemento principal */
+}
+
+nav ul li .submenu li 
+{
+    display: block; /* Los elementos del submenú se alinean verticalmente */
+    margin-bottom: 10px; /* Espaciado entre los elementos del submenú */
+
+}
+
+nav ul li .submenu li a 
+{
+    padding: 10px; /* Añade espaciado interior a los enlaces */
+    color: white; /* Color de texto blanco en el submenú */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    display: block; /* Hace que el área clickeable del enlace ocupe toda la fila */
+    border-radius: 0px; /* Redondea los bordes de los enlaces */
+    
+}
+
+nav ul li .submenu li a:hover 
+{
+    color: #f1bfded2; /* Color al pasar el cursor */
+    background-color: #e645fc; /* Fondo cuando el cursor está sobre el enlace */
+}
+@media (max-width: 768px) 
+{
+     nav ul 
+     {
+        flex-direction: column; /* Cambia la dirección del menú a columna */
+    }
+
+    nav ul li {
+        width: 100%; /* Asegura que cada elemento ocupe el 100% del ancho */
+    }
+    nav ul li  a {
+        padding: 1em; /* Mantiene el tamaño adecuado */
+        text-align: center; /* Centra el texto en los elementos del menú */
+    }
+
+    /* Hacer que el submenú sea más accesible en móviles */
+    nav ul li .submenu {
+        position: static; /* Cambia la posición para que el submenú se muestre debajo del elemento principal */
+        display: none;
+    }
+
+}
+
+
+/* Estilos para las secciones en bloques*/
+div.bloque1
+ {
+    background-color: #45f1e9;/*Color de fondo*/
+    color: rgb(0, 0, 0); /* Color de texto blanco */
+    padding: 20px; /* Aplica un espacio intewrior  en todos los lados */
+    margin: 20px;/* Aplica un margen en todos los lados */
+    border: 1px solid #ffffff;/*Color de border*/
+    border-radius: 0px;/*Grados del borde*/
+}
+div.bloque2
+ {
+    background-color: #46e060;/*Color de fondo*/
+    color: rgb(7, 7, 7); /* Color de texto blanco */
+    padding: 20px; /* Aplica un espacio intewrior  en todos los lados */
+    margin: 20px;/* Aplica un margen en todos los lados */
+    border: 1px solid #ffffff;/*Color de border*/
+    border-radius: 0px;/*Grados del borde*/
+}
+div.bloque3
+ {
+    background-color: #9f64a1;/*Color de fondo*/
+    color: rgb(7, 6, 6); /* Color de texto blanco */
+    padding: 20px; /* Aplica un espacio intewrior  en todos los lados */
+    margin: 20px;/* Aplica un margen en todos los lados */
+    border: 1px solid #ffffff;/*Color de border*/
+    border-radius: 0px;/*Grados del borde*/
+}
+table {
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Elimina el espacio entre los bordes */
+    margin: 20px auto; /* Centra la tabla */
+    border-radius: 0px;/*Grados del borde*/
+}
+
+/* Estilo para las celdas (th y td) */
+th, td {
+    border: 2px solid #f8f5f5; /* Bordes verdes */
+    padding: 10px; /* Espacio interno en las celdas */
+    text-align: center; /* Centra el contenido */
+    
+}
+
+/* Estilo para el encabezado */
+th {
+    background-color: #3a71e7; /* Fondo */
+    color: rgb(247, 247, 247); /* Texto blanco */
+  
+}
+
+tr:nth-child(even) {
+    background-color: #3a71e7;
+}
